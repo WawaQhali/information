@@ -1,0 +1,135 @@
+/* Wawa Qhali · términos y privacidad. Misma paleta y letras que la app. */
+:root {
+  --crema: #f6efe4;
+  --arena: #ede1cf;
+  --superficie: #fffcf7;
+  --borde: #e4d5bf;
+  --tinta: #2a221c;
+  --suave: #5e5145;
+  --caramelo: #8c5a3a;
+  --caramelo-oscuro: #6b4429;
+  --terracota: #a33a2a;
+  --terracota-fondo: #f6e1d9;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--crema);
+  color: var(--tinta);
+  font-family: Montserrat, system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+a { color: var(--caramelo); text-underline-offset: 3px; }
+a:hover { color: var(--caramelo-oscuro); }
+a:focus-visible { outline: 3px solid var(--caramelo); outline-offset: 2px; border-radius: 4px; }
+
+.cabecera {
+  background: var(--superficie);
+  border-bottom: 1px solid var(--borde);
+}
+
+.cabecera__dentro,
+main,
+.pie__dentro {
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.cabecera__dentro {
+  min-height: 64px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 16px;
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 21px;
+  font-weight: 700;
+  color: var(--tinta);
+  text-decoration: none;
+}
+
+.cabecera nav { display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: 14px; font-weight: 600; }
+.cabecera nav a { text-decoration: none; padding: 10px 0; }
+.cabecera nav a[aria-current="page"] { color: var(--tinta); text-decoration: underline; }
+
+main { padding-top: 36px; padding-bottom: 56px; }
+
+h1, h2, h3 { font-family: "Playfair Display", Georgia, serif; line-height: 1.25; }
+h1 { font-size: 36px; margin: 0 0 8px; }
+h2 { font-size: 24px; margin: 40px 0 10px; scroll-margin-top: 16px; }
+h3 { font-size: 18px; margin: 24px 0 6px; }
+
+.fecha { margin: 0; font-size: 14px; color: var(--suave); }
+
+.aviso {
+  margin: 24px 0;
+  padding: 16px 18px;
+  border-radius: 16px;
+  background: var(--terracota-fondo);
+  color: #7a2a1e;
+  font-weight: 500;
+}
+.aviso strong { color: var(--terracota); }
+
+.tarjeta {
+  margin: 20px 0;
+  padding: 18px 20px;
+  border-radius: 18px;
+  background: var(--superficie);
+  border: 1px solid var(--borde);
+}
+
+.indice { padding: 0; margin: 0; list-style: none; columns: 2 220px; column-gap: 24px; font-size: 14.5px; }
+.indice li { margin: 4px 0; break-inside: avoid; }
+
+table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 14.5px; }
+th, td { text-align: left; vertical-align: top; padding: 10px 12px; border-bottom: 1px solid var(--borde); }
+th { background: var(--arena); font-weight: 700; }
+.tabla { overflow-x: auto; border-radius: 14px; border: 1px solid var(--borde); background: var(--superficie); }
+.tabla table { margin: 0; }
+
+.contactos { padding-left: 20px; }
+.contactos li { margin: 4px 0; overflow-wrap: anywhere; }
+
+.pendiente { background: #f3e4c8; color: #7a4e12; padding: 0 4px; border-radius: 4px; font-weight: 600; }
+
+.botones { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+.boton {
+  display: inline-flex;
+  align-items: center;
+  min-height: 52px;
+  padding: 0 22px;
+  border-radius: 16px;
+  background: var(--caramelo);
+  color: #fff8ee;
+  font-weight: 600;
+  text-decoration: none;
+}
+.boton:hover { background: var(--caramelo-oscuro); color: #fff8ee; }
+.boton--borde { background: transparent; color: var(--caramelo); border: 1.5px solid var(--caramelo); }
+.boton--borde:hover { background: var(--arena); color: var(--caramelo-oscuro); }
+
+.pie { border-top: 1px solid var(--borde); background: var(--superficie); font-size: 13.5px; color: var(--suave); }
+.pie__dentro { padding-top: 20px; padding-bottom: 28px; }
+.pie p { margin: 4px 0; }
+
+@media (max-width: 520px) {
+  h1 { font-size: 29px; }
+  h2 { font-size: 21px; }
+  main { padding-top: 26px; }
+}
